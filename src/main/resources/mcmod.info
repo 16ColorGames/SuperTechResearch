@@ -1,9 +1,14 @@
 [
 {
+  "modid": "supertechresearch",
+  "name": "Super Tech Research",
+  "description": "Research expansion for Super Tech.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
+  "authorList": ["Oa10712"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

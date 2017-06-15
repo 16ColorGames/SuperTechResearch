@@ -14,7 +14,6 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 version = "1.0.0"
 group= "com.sixteencolorgames.supertechtweaks.SuperTechResearchMod.modId" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "supertechresearchmod"
-
 sourceCompatibility = targetCompatibility = "1.8" // Need this here so eclipse task generates correctly.
 compileJava {
     sourceCompatibility = targetCompatibility = "1.8"
@@ -41,6 +40,10 @@ repositories {
     maven {
         name 'DVS1 Maven FS'
         url 'http://dvs1.progwml6.com/files/maven'
+    }   
+    ivy {
+        name = 'lunatrius\' ivy repo'
+        url 'http://mc.lunatri.us/files'
     }
 }
 
@@ -69,7 +72,9 @@ dependencies {
 	
     deobfCompile "slimeknights.mantle:Mantle:1.10.2-1.1.4.+"
     deobfCompile "slimeknights:TConstruct:1.10.2-2.6.3.500"
-    compile files("libs/SuperTechTweaks.jar")
+    deobfCompile group: 'com.github.lunatrius', name: 'LunatriusCore', version: "${project.version_minecraft}-${project.version_lunatriuscore}", classifier: 'universal'
+    compile files('libs/SuperTechTweaks.jar')
+    //compile files('libs/LunatriusCore.jar')
 }
 
 processResources

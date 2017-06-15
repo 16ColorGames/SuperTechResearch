@@ -6,7 +6,6 @@
 package com.sixteencolorgames.supertechresearch.network;
 
 import com.sixteencolorgames.supertechresearch.gui.GuiTutorial;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.IGuiHandler;
